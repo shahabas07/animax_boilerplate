@@ -101,14 +101,49 @@ footer {
     text-align: center;
 }
 
+.flex .button{
+    width: 10px;
+    height: 10px;
+}
+
 /* Iteration 1: Styling all the flex elements with (Justify-content:space-between) & (align-items:center) */
-
+.flex-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 /* Iteration 2: Using flex-wrap */
-
+.movies{
+    flex-wrap: wrap;
+    margin: 5% 9%;
+}
 /* Iteration 3: Styling all the flex elements with (flex-direction:column), (Justify-content:space-evenly) */
-
+.flex-column{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
 /* Iteration 4: Animation */
+#scroll{
+    
+    animation: slide 3s infinite;
+}
 
+@keyframes slide{
+    0%{
+        transform: translateY(0px);
+    }
+    100%{
+        transform: translateY(60px);
+    }
+}
 /* Iteration 5: Making webpage mobile responsive */
 
-
+@media (max-width:600px){
+    .wrap-reverse{
+        flex-wrap: wrap-reverse
+    }
+    .movies{
+        text-align: center;
+    }
+}
